@@ -9,6 +9,9 @@ public class Bird : MonoBehaviour
     public GameManager gm;
     public GameObject deathScreen;
 
+    public AudioSource src;
+    public AudioClip sfx;
+
     public bool isDead;
 
     private void Start()
@@ -30,6 +33,8 @@ public class Bird : MonoBehaviour
         if (collision.gameObject.name == "ScoreArea")
         {
             gm.UpdateScore();
+            src.clip = sfx;
+            src.Play();
         }
     }
 
