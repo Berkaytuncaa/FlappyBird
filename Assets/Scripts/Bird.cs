@@ -8,6 +8,7 @@ public class Bird : MonoBehaviour
     private Rigidbody2D rb;
     public GameManager gm;
     public GameObject deathScreen;
+    public GameObject pauseScreen;
 
     public AudioSource src;
     public AudioClip sfx;
@@ -46,6 +47,8 @@ public class Bird : MonoBehaviour
             Time.timeScale = 0;
 
             deathScreen.SetActive(true);
+            pauseScreen.SetActive(false);
+
         }
     }
 }
